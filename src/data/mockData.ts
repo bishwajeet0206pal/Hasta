@@ -280,7 +280,7 @@ export const INITIAL_ARTISANS: Artisan[] = [
     workshopImages: [
       'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=900&q=80',
       'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?auto=format&fit=crop&w=900&q=80'
+      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80'
     ],
     story: 'Weaving heirloom textiles on centuries-old wooden pit looms. The master weavers use certified pure mulberry silk threads intertwined with silver zari dipped in 24K gold, producing heavy, lustrous temple borders that require two weavers seated side-by-side using the Korvai 3-shuttle interlocking technique.',
     hindiStory: 'लकड़ी के पारंपरिक गड्ढा-करघों पर शुद्ध रेशम और सोने-चांदी की असली ज़री से कांचीपुरम की भव्य साड़ियां और पश्मीना वस्त्र बुनते हैं।',
@@ -313,7 +313,7 @@ export const INITIAL_ARTISANS: Artisan[] = [
         timeOfDay: '06:00 PM • Evening',
         title: 'Silk Luster Inspection',
         caption: 'Inspecting the rich peacock feather sheen under natural twilight in the weaving courtyard.',
-        image: 'https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?auto=format&fit=crop&w=900&q=80'
+        image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80'
       }
     ],
     processSteps: [
@@ -346,7 +346,7 @@ export const INITIAL_ARTISANS: Artisan[] = [
         title: 'Real Zari Jacquard Embossing',
         duration: '6 Days',
         description: 'Woven with certified Surat silver zari gilded in 24K pure gold for iconic peacock and lotus motifs.',
-        image: 'https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?auto=format&fit=crop&w=900&q=80',
+        image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80',
         toolUsed: 'Hand-punched Adai Design Cards'
       },
       {
@@ -1024,7 +1024,7 @@ export const INITIAL_ENQUIRIES: Enquiry[] = [
     buyerCity: 'Mumbai',
     productId: 'prod-4',
     productName: 'Autumn Chinar Jamawar Handloom Pashmina Throw',
-    productImage: 'https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?auto=format&fit=crop&w=400&q=80',
+    productImage: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=400&q=80',
     artisanId: 'artisan-3',
     artisanName: 'Master Ghulam Mohiuddin',
     requestType: 'bespoke_piece',

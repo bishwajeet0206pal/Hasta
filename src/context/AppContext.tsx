@@ -100,7 +100,7 @@ interface AppContextType {
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'hasta_marketplace_state_v9_authentic_craft_images';
+const STORAGE_KEY = 'hasta_marketplace_state_v10_complete_craft_purity';
 
 // Automatic migration & cleanup of stale legacy mock caches
 if (typeof window !== 'undefined') {
@@ -146,8 +146,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           a.profileImage?.includes('photo-1472099645') ||
           a.profileImage?.includes('photo-1507003211') ||
           a.profileImage?.includes('photo-1534528741') ||
-          a.workshopImages?.some(img => img.includes('wikimedia.org')) ||
-          a.studioMoments?.some(m => m.image?.includes('wikimedia.org') || m.image?.includes('photo-152414398'))
+          a.workshopImages?.some(img => img.includes('wikimedia.org') || img.includes('photo-1606744837')) ||
+          a.studioMoments?.some(m => m.image?.includes('wikimedia.org') || m.image?.includes('photo-152414398') || m.image?.includes('photo-1606744837'))
         );
         if (!hasLegacyOrBroken && parsed.some(a => a.name.includes('Devendra Kashyap'))) {
           return parsed;

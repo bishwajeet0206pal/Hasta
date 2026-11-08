@@ -350,8 +350,11 @@ export const ProductCatalog: React.FC = () => {
                           src={product.images[0]}
                           alt={product.name}
                           onError={(e) => {
-                            // Safe fallback to craft imagery if image network drops
-                            (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80';
+                            const target = e.target as HTMLImageElement;
+                            if (!target.dataset.fallbackApplied) {
+                              target.dataset.fallbackApplied = 'true';
+                              target.src = 'https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=800&q=80';
+                            }
                           }}
                           className="w-full h-full object-cover rounded-[8px] group-hover:scale-102 transition-transform duration-300"
                         />

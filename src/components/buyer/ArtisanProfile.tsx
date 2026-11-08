@@ -129,7 +129,11 @@ export const ArtisanProfile: React.FC = () => {
                   src={artisan.profileImage}
                   alt={artisan.name}
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1607867810523-d10955f2a8df?auto=format&fit=crop&w=600&q=80';
+                    const target = e.target as HTMLImageElement;
+                    if (!target.dataset.fallbackApplied) {
+                      target.dataset.fallbackApplied = 'true';
+                      target.src = 'https://images.unsplash.com/photo-1607867810523-d10955f2a8df?auto=format&fit=crop&w=600&q=80';
+                    }
                   }}
                   className="w-28 sm:w-36 aspect-[3/4] rounded-[12px] object-cover border-4 border-white shadow-2xl bg-stone-100"
                 />
@@ -267,7 +271,11 @@ export const ArtisanProfile: React.FC = () => {
                     src={moment.image}
                     alt={moment.title}
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=900&q=80';
+                      const target = e.target as HTMLImageElement;
+                      if (!target.dataset.fallbackApplied) {
+                        target.dataset.fallbackApplied = 'true';
+                        target.src = 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=900&q=80';
+                      }
                     }}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-95 group-hover:opacity-100"
                   />
@@ -379,7 +387,11 @@ export const ArtisanProfile: React.FC = () => {
                   src={currentProcessStep.image}
                   alt={currentProcessStep.title}
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=900&q=80';
+                    const target = e.target as HTMLImageElement;
+                    if (!target.dataset.fallbackApplied) {
+                      target.dataset.fallbackApplied = 'true';
+                      target.src = 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=900&q=80';
+                    }
                   }}
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                 />

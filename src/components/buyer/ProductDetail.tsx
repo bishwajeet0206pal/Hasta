@@ -70,7 +70,11 @@ export const ProductDetail: React.FC = () => {
               src={product.images[activeImageIndex] || product.images[0]}
               alt={product.name}
               onError={(e) => {
-                (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80';
+                const target = e.target as HTMLImageElement;
+                if (!target.dataset.fallbackApplied) {
+                  target.dataset.fallbackApplied = 'true';
+                  target.src = 'https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=800&q=80';
+                }
               }}
               className="w-full h-full object-cover transition-all duration-300"
             />
@@ -146,7 +150,11 @@ export const ProductDetail: React.FC = () => {
                   src={artisan.profileImage}
                   alt={artisan.name}
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1607867810523-d10955f2a8df?auto=format&fit=crop&w=600&q=80';
+                    const target = e.target as HTMLImageElement;
+                    if (!target.dataset.fallbackApplied) {
+                      target.dataset.fallbackApplied = 'true';
+                      target.src = 'https://images.unsplash.com/photo-1607867810523-d10955f2a8df?auto=format&fit=crop&w=600&q=80';
+                    }
                   }}
                   className="w-12 h-12 rounded-[8px] object-cover border border-[#E6D8C5] shrink-0 bg-stone-100"
                 />

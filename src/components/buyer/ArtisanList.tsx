@@ -48,7 +48,11 @@ export const ArtisanList: React.FC = () => {
                     src={artisan.profileImage}
                     alt={artisan.name}
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1607867810523-d10955f2a8df?auto=format&fit=crop&w=600&q=80';
+                      const target = e.target as HTMLImageElement;
+                      if (!target.dataset.fallbackApplied) {
+                        target.dataset.fallbackApplied = 'true';
+                        target.src = 'https://images.unsplash.com/photo-1607867810523-d10955f2a8df?auto=format&fit=crop&w=600&q=80';
+                      }
                     }}
                     className="w-full h-full object-cover"
                   />
